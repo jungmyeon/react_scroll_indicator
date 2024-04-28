@@ -1,0 +1,26 @@
+.top-nav-container{
+  position: fixed;      /* 화면을 기준으로 */
+  top: 0;               /* 위를 기준으로 0 */
+  z-index: 5;           /* z축 띄우는 정도 */
+  width:100%;           /* 가로크기 */
+  text-align:center;    /* 글자정렬 */
+  background: black;  /* 배경색 */
+  color: white;       /* 글자색 */
+}
+
+.scroll-progress-tracking{
+  width: 100%;                  /* 가로크기 */
+  height: 10px;                 /* 세로크기 */
+  background: rgb(79, 166, 216);    /* 배경색 */
+}
+
+.current-progress-bar{
+  height: 10px;
+  background: linear-gradient(to right, 
+  red, orange, yellow, green, blue, indigo, violet);
+  width: 0%;        /* 처음에는 크기 0% */
+}
+
+.data-list{
+  margin-top: 100px;
+}
