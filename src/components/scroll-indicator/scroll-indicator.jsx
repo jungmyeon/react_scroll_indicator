@@ -51,7 +51,12 @@ export default function ScrollIndicator({url})
   // 스크롤 이벤트
   useEffect(()=>{
     window.addEventListener('scroll',changeScrollEvent)
-  })
+
+    return(()=>{
+      // unmount : 컴포넌트가 해제되면 동작 
+      window.removeEventListener('scroll',changeScrollEvent)
+    })
+  },[])   // [] : update는 동작 안하게 (처음mount만 동작)
 
   function changeScrollEvent(){
     // 스크롤의 위치를 감지 ==> 현재 스크롤 위치
